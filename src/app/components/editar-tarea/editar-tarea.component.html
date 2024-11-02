@@ -1,0 +1,14 @@
+<h2 mat-dialog-title>{{ data.accion }} tarea</h2>
+<mat-dialog-content>
+    <form [formGroup]="formulario" (ngSubmit)="accionTask()">
+        <div class="mb-3">
+            <label for="descripcionCorta" class="form-label">Descripción corta</label>
+            <input type="text" class="form-control" id="descripcionCorta" formControlName="descripcionCorta" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="descripcionLarga" class="form-label">Descripción larga</label>
+            <textarea id="descripcionLarga" class="form-control" formControlName="descripcionLarga"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Aceptar</button>
+    </form>
+</mat-dialog-content>

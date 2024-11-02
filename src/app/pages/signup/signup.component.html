@@ -1,0 +1,18 @@
+<div class="container">
+    <form [formGroup]="formulario" (ngSubmit)="registrarUsuario()" autocomplete="off">
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre completo</label>
+            <input type="text" class="form-control" id="nombre" formControlName="nombre">
+        </div>
+        <div class="mb-3">
+            <label for="correo" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="correo" formControlName="correo" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="password" formControlName="password">
+            <div id="help" class="form-text">¿Está registrado? <a [routerLink]="['/auth/login']">Iniciar sesión</a></div>
+        </div>
+        <button type="submit" class="btn btn-primary">Aceptar</button>
+    </form>
+</div>
